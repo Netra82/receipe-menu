@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <style>
+        /* table,tr,td,th{ */
+            /* border: 2px solid black;
+            background-color: aqua;
+        } 
+        img{
+            width: 100px;
+            height: 100px;
+        } */
+        .recipes{
+            padding: 10px;
+            margin-left: 200px;
+        }
+        .recipe img{
+            width: 200px;
+            height: 200px;
+        }
+        .col-auto{
+            margin-top: 50px;
+        }
+        .row{
+            padding: 50px;
+        }
+        .recipe{
+            width: 250px;
+            height: 250px;
+        }  
+        .recipe a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            background-image: url('https://wallpaperaccess.com/full/2696016.jpg');
+        }
+    </style>
+   
+</head>
+<body>
+<!-- <table>
+    <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>ingredients</th>
+        <th>Images</th>
+    </tr>
+    {% for recipe in recipes %}
+    <tr>
+        <td>{{recipe.id}}</td>
+        <td>{{recipe.name}}</td>
+        <td>{{recipe.ingredients}}</td>
+        <td><img src="{{recipe.image}}"></td>
+    </tr>
+    {% endfor %}
+</table> 
+
+
+<div class="recipes">
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col-auto">
+            <div class="recipe">
+                <a href="{% url 'recipe' forloop.counter %}">
+                <img src="{{recipe.image}}" alt="">
+                <div class="details">
+                     <h5 class="text-center">{{recipe.name}}</h5>
+                    <p>rating:{{recipe.rating}} {{recipe.recipeCount}}
+                        <br>served:{{recipe.servings}} persons </p>
+                </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div> -->
+
+<div class="recipes">
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col-auto">
+            <div class="recipe">
+                <a href="{% url 'recipe' forloop.counter %}">
+                    <img src="{{recipe.image}}" alt="">
+                    <div class="details">
+                        <h3>{{recipe.name}}</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

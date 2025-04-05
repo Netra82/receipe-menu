@@ -1,0 +1,40 @@
+<!-- <img src="{{recipe.image}}" alt=""> -->
+
+<p>{{recipe.name}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        body{
+            text-align: center;
+            font: large;
+            background: url('https://wallpaperaccess.com/full/2696016.jpg');
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <table>
+        <tr><img src="{{recipe.image}}" alt=""></tr><br>
+        <tr>ID:{{recipe.id}}</tr><br>
+        <tr>Name:{{recipe.name}}</tr><br>
+        <tr>ingredients:{{recipe.ingredients}}</tr><br>
+        <!-- <tr>instructions:{{recipe.instructions}}</tr> -->
+    </table>
+
+    <!-- {{recipe}} -->
+    
+    
+        
+    
+
+</body>
+</html>
