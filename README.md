@@ -1,0 +1,2 @@
+# receipe-menu
+Django project
